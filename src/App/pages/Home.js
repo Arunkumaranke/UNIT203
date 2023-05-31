@@ -1,13 +1,12 @@
-import React, { Component, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import "./Home.css";
 import { Button, TextField } from "@mui/material";
 const Home = () => {
   //Styling variables
-  const BLUE = "#172162"; //"rgb(23, 33, 98)";
-  const LIGHT_GREY = "#6e7484";
-  const BLACK = "#000000";
+  //   const BLUE = "#172162"; //"rgb(23, 33, 98)";
+  //   const LIGHT_GREY = "#6e7484";
+  //   const BLACK = "#000000";
 
   //First part given
   //   const lineItems =;
