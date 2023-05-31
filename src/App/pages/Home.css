@@ -1,0 +1,20 @@
+
+.Heading{
+    color:#172162;
+}
+.containerBox{
+    padding: 5% 15%;
+}
+.removeBtn{
+    cursor: pointer;
+    
+}
+.underline{
+    border-bottom: 1px solid black;
+}
+.smallFont {
+    font-size: 13px;
+}
+.Checkout{
+    padding-top: 10%;
+}

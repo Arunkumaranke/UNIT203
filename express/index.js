@@ -37,7 +37,41 @@ app.get("/api/getList", (req, res) => {
   res.json(list);
   console.log("Sent list of items");
 });
+app.get("/api/postDate", (req, res) => {
+  console.log(req.query.date, "req");
+  var dates = [
+    {
+      postal: "V",
 
+      ids: [2],
+      estimatedDeliveryDate: "Nov 24, 2021",
+    },
+    {
+      postal: "V",
+      ids: [1, 3],
+      estimatedDeliveryDate: "Nov 19, 2021",
+    },
+    {
+      postal: "M",
+      ids: [2, 3],
+      estimatedDeliveryDate: "Nov 22, 2021",
+    },
+    {
+      postal: "M",
+      ids: [1],
+      estimatedDeliveryDate: "Dec 19, 2021",
+    },
+    {
+      postal: "K",
+      ids: [1, 2, 3],
+      estimatedDeliveryDate: "Dec 24, 2021",
+    },
+  ];
+  const filterDate = dates.filter((date) => {
+    return date.postal === req.query.date;
+  });
+  res.json(filterDate);
+});
 // Handles any requests that don't match the ones above
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
